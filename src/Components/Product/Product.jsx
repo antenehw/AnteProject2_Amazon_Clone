@@ -1,7 +1,8 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import axios from "axios"
 import ProductCard from './ProductCard'
-import styles from './product.module.css';
+import modularcss from './product.module.css';
 
 
 function Product() {
@@ -19,10 +20,15 @@ function Product() {
         }, [])
 
 return (
-    <section className={styles.products_container}>
+    <section className={modularcss.products_container}>
     {
         products?.map((singleProduct)=>{
         return  <ProductCard product={singleProduct} key={singleProduct.id}
+            image={singleProduct.image}
+            title={singleProduct.title}
+            id={singleProduct.id}
+            rating={singleProduct.rating}
+            price={singleProduct.price}
         />
         })}
     </section>

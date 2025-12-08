@@ -1,18 +1,20 @@
 import React from 'react'
 import Rating from "@mui/material/Rating"
+import modularcss from './Product.module.css';
 import CurrencyFormat from '../currencyFormat/CurrencyFormat'
 
-function ProductCard({product}) {
-    const { image, title, id, rating, price } = product;
+
+function ProductCard(Product) {
+    const { img, title, id, rating, price }  = Product;
     
     return (
-    <div className={`${classes.card_container}`}>
+    <div className={`${modularcss.card_container}`}>
     <a href=''>
-        <img src={image} alt={title} />
+        <img src={img} alt={title} />
     </a>
     <div>
         <h3> {title} </h3>
-                <div className={classes.rating}>
+                <div className={modularcss.rating}>
             {/* rating */}
             <Rating value={rating.rate} precision={0.1}/>
 
@@ -21,12 +23,12 @@ function ProductCard({product}) {
 
         </div>
     </div>
-    <div className={classes.price}>
+    <div className={modularcss.price}>
         {/* price */}
         <CurrencyFormat amount={price}/>
     </div>
 
-    <button className={classes.button}>
+    <button className={modularcss.button}>
         add to cart
     </button>
     </div>
@@ -34,4 +36,4 @@ function ProductCard({product}) {
 
 }
 
-export default ProductCard
+export default ProductCard;

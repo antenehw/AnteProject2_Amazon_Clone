@@ -6,12 +6,5 @@ const CurrencyFormat=({amount})=>{
     return <div>{formattedAmount}</div>
 }
 
-function CurrencyFormat() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
 export default CurrencyFormat

@@ -1,9 +1,9 @@
 import React from 'react'
-import classes from "./Category.module.css"
+import modularcss from "./Category.module.css"
 
 function CategoryCard({data}) {
   return (
-    <div className={classes.category}>
+    <div className={modularcss.category}>
         
       <a href=''>
         <span>

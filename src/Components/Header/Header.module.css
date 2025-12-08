@@ -1,82 +1,127 @@
+/* =========================================
+   MAIN HEADER CONTAINER
+   ========================================= */
 .header {
-    background-color: #131921;
+    background-color: #0f7a05;   /* Amazon dark header background */
+    display: flex;      /* Layout items horizontally */
+    align-items: center;     /* Vertically center everything */
+    padding: 10px;     /* Inner spacing */
+    color: white;     /* Default text color */
+    gap: 20px;     /* Space between logo, search, nav */
+    position: sticky;   /* Stick to top on scroll */
+    top: 0;      /* Stick to top */ 
+    z-index: 100;   /* Stay above other content */
+}
+
+.header__left {
     display: flex;
     align-items: center;
-    padding: 10px;
-    color: white;
-    gap: 20px;
+    gap: 10px;
+}
+/* =========================================
+   LOGO AREA
+   ========================================= */
+.header__logoLink {
+    display: flex;   /* Ensure image behaves correctly */
+    align-items: center;
 }
 
 .header__logo {
-    width: 100px;
-    object-fit: contain;
+    width: 100px;   /* Logo size */
+    object-fit: contain;  /* Keep proportion */
+    margin-top: 5px;
+    cursor: pointer;  /* Show clickable/Link behavior */
 }
 
-.header__delivery {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.header__deliveryIcon {
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-.header__deliveryText p {
-    font-size: 12px;
-    margin: 0;
-}
-
-.header__deliveryText span {
-    font-size: 14px;
-    font-weight: bold;
-}
-
+/* =========================================
+   SEARCH BAR SECTION
+   ========================================= */
 .header__search {
-    display: flex;
-    flex: 1;
+    display: flex;    /* Align select, input, icon */
+    flex: 1;      /* Take full available width */
+    max-width: 650px;    /* Limit width on large screens */
     align-items: center;
-    max-width: 650px;
-    background: white;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 40px;
+    background-color: white;   /* White search bar */
+    border-radius: 5px;       /* Slightly rounded edges */
+    overflow: hidden;    /* Prevent children from overflowing */
+    height: 40px;    /* Standard Amazon height */
 }
 
-.header__search select {
-    border: none;
-    outline: none;
+/* Dropdown (All) */
+.header__searchSelect {
+    border: none;       /* Remove browser border */
+    outline: none;    /* Remove focus outline */
     padding: 5px;
-    background: #e6e6e6;
-}
-
-.header__search input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 10px;
-}
-
-.header__searchIcon {
-    background-color: #febd69;
-    padding: 10px;
+    background-color: #e6e6e6;    /* Gray select background */
     cursor: pointer;
 }
 
-.header__right {
-    display: flex;
-    align-items: center;
+/* Input box */
+.header__searchInput {
+    flex: 1;    /* Input expands to fill space */
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* Search icon */
+.header__searchIcon {
+    background-color: #c20c45;    /* Amazon search button color */
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* =========================================
+   RIGHT NAVIGATION SECTION
+   ========================================= */
+.header__nav {
+    display: flex;    /* Horizontal layout */
+    align-items:center;   /* Align items to bottom */
     gap: 20px;
+    /* Space between nav items */
 }
 
-.header__lang {
+
+/* =========================================
+   NAV SINGLE OPTION BLOCK
+   (Deliver to, Account, Returns)
+   ========================================= */
+.header__option {
+    display: flex;
+    flex-direction: column;   
+     /* Text stacked vertically */
+    cursor: pointer;
+}
+
+.header__OptionLineOne {
+    font-size: 10px;
+        /* Small top text */
+}
+
+.header__optionLineTwo {
+    font-size: 12px;    
+    /* Larger bottom text */
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SHOPPING CART AREA
+   ========================================= */
+.header__basket {
     display: flex;
     align-items: center;
-    gap: 5px;
+    color: rgb(166, 218, 23);
 }
 
-.header__flag {
-    width: 22px;
-    border-radius: 2px;
+.header__basketIcon {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.header__basketCount {
+    font-weight: bold;
+    font-size: 16px;
 }

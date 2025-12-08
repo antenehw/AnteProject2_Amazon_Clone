@@ -1,10 +1,12 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import modularcss from "./Carousel.module.css";
+import {img} from "./img/data";
 
-function CarouselComponent({ img }) {
+function CarouselComponent({img}) {
   return (
-    <div>
+    <div >
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
@@ -12,8 +14,9 @@ function CarouselComponent({ img }) {
         showThumbs={true}
         showStatus={false}
       >
-        {img.map((imageItemLink, index) => (
-          <div key={index}>
+      {img.map((imageItemLink, index) => (
+      
+      <div className={modularcss.hero__img} key={index}>
             <img src={imageItemLink} alt={`slide-${index}`} />
           </div>
         ))}

@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header.jsx";
+import Product from "./Components/Product/Product.jsx";
+import CarouselComponent from './Components/Carousel/CarouselComponent.jsx';
 
-import Header from './Components/Header';
-import Product from './Components/Product'
-import CarouselComponent from "./components/Carousel/CarouselComponent";
 
 // Example images for carousel
 const bannerImages = [
@@ -15,7 +15,7 @@ const bannerImages = [
 function App() {
   return (
     <Router>
-      <Header />
+      <Header/>
 
       <Routes>
         {/* Home Page */}

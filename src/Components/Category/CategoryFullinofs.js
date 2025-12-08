@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-function CategoryFullinofs() {
-  return (
-    <div>
+// function CategoryFullinofs() {
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default CategoryFullinofs
+// export default CategoryFullinofs
