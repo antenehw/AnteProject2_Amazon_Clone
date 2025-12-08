@@ -6,13 +6,13 @@ import modularcss from "./Category.module.css"
 function Category() {
   return (
     <Section className={modularcss.category_container}>
-        {categoryInfos.map((infos)=>(
+        {categoryInfos.map((infos,index)=>(
             <CategoryCard data={infos}/>
         ))
         }
               
     </Section>
-  )
+  );
 }
 
-export default Category
+export default Category;

@@ -1,0 +1,11 @@
+
+.category_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: -100px;
+    /* Amazon style under carousel */
+    position: relative;
+    z-index: 2;
+}

@@ -5,15 +5,15 @@ function CategoryCard({data}) {
   return (
     <div className={modularcss.category}>
         
-      <a href=''>
+      <a href={data.link || "#"} className={modularcss.category__link} >
         <span>
-            <h2> title</h2>
+            <h2> {data.title}</h2>
         </span>
-        <img src="" alt="" />
+        <img src={data.img} alt={data.title} />
         <p> shop now </p>
       </a>
     </div>
   )
 }
 
-export default CategoryCard
+export default CategoryCard;

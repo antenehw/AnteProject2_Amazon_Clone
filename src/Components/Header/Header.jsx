@@ -24,7 +24,7 @@ function Header() {
         <div className={modularcss.header__delivery}>
           <span className={modularcss.header__deliveryIcon}>📍</span>
           <div className={modularcss.header__deliveryText}>
-            <p>Deliver to Evan June-25 G-3</p>
+            <p>Deliver to G-3</p>
             <span>Evangadi</span>
           </div>
         </div>
@@ -62,7 +62,7 @@ function Header() {
         {/* Location */}
         <div className={modularcss.header__option}>
           <p className={modularcss.header__optionLineOne}>Deliver to</p>
-          <p className={modularcss.header__optionLineTwo}>Ethiopia</p>
+          <p className={modularcss.header__optionLineTwo}>Client address</p>
         </div>
 
         {/* Account */}

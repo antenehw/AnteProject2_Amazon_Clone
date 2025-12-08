@@ -39,7 +39,8 @@
 .header__search {
     display: flex;    /* Align select, input, icon */
     flex: 1;      /* Take full available width */
-    max-width: 650px;    /* Limit width on large screens */
+    min-width: 300px;
+    max-width: 600px;    /* Limit width on large screens */
     align-items: center;
     background-color: white;   /* White search bar */
     border-radius: 5px;       /* Slightly rounded edges */
@@ -69,8 +70,12 @@
 .header__searchIcon {
     background-color: #c20c45;    /* Amazon search button color */
     padding: 10px;
+    width: 40px;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* =========================================
@@ -95,8 +100,8 @@
     cursor: pointer;
 }
 
-.header__OptionLineOne {
-    font-size: 10px;
+.header__optionLineOne {
+    font-size: 12px;
         /* Small top text */
 }
 
