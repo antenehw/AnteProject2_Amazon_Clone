@@ -1,19 +1,24 @@
-import React from 'react'
-import modularcss from "./Category.module.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import modularcss from "./Category.module.css";
 
-function CategoryCard({data}) {
+function CategoryCard({ category }) {
   return (
-    <div className={modularcss.category}>
-        
-      <a href={data.link || "#"} className={modularcss.category__link} >
-        <span>
-            <h2> {data.title}</h2>
-        </span>
-        <img src={data.img} alt={data.title} />
-        <p> shop now </p>
-      </a>
-    </div>
-  )
+    <Link to={`/category/${category.id}`} className={modularcss.card}>
+      <div className={modularcss.imageWrapper}>
+        <img
+          src={category.image || "https://via.placeholder.com/200"}
+          alt={category.name}
+        />
+      </div>
+      <h3 className={modularcss.name}>{category.name}</h3>
+    </Link>
+  );
 }
 
 export default CategoryCard;
+
+
+
+
+

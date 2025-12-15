@@ -1,18 +1,20 @@
 .carouselContainer {
     width: 100%;
-    max-width: 1500px;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     overflow: hidden;
+}
+
+.hero__img {
+    position: relative;
 }
 
 .hero__img img {
     width: 100%;
     height: 400px;
     object-fit: cover;
-}
-
-.hero__img {
-    position: relative;
+    max-height: 500px;
+    border-radius: 5px;
 }
 
 .hero__img::after {
@@ -22,12 +24,8 @@
     left: 0;
     width: 100%;
     height: 150px;
-
     background: linear-gradient(to bottom,
             rgba(255, 255, 255, 0) 0%,
             #ffffff 100%);
-}
 
-.carouselContainer {
-    margin-top:5px;
 }

@@ -1,132 +1,221 @@
 /* =========================================
    MAIN HEADER CONTAINER
-   ========================================= */
+========================================= */
 .header {
-    background-color: #0f7a05;   /* Amazon dark header background */
-    display: flex;      /* Layout items horizontally */
-    align-items: center;     /* Vertically center everything */
-    padding: 10px;     /* Inner spacing */
-    color: white;     /* Default text color */
-    gap: 20px;     /* Space between logo, search, nav */
-    position: sticky;   /* Stick to top on scroll */
-    top: 0;      /* Stick to top */ 
-    z-index: 100;   /* Stay above other content */
+    background-color: #0f7a05;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+/* =========================================
+   LEFT SECTION
+========================================= */
 .header__left {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-/* =========================================
-   LOGO AREA
-   ========================================= */
+
+/* Logo */
 .header__logoLink {
-    display: flex;   /* Ensure image behaves correctly */
+    display: flex;
     align-items: center;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .header__logo {
-    width: 100px;   /* Logo size */
-    object-fit: contain;  /* Keep proportion */
-    margin-top: 5px;
-    cursor: pointer;  /* Show clickable/Link behavior */
-}
-
-/* =========================================
-   SEARCH BAR SECTION
-   ========================================= */
-.header__search {
-    display: flex;    /* Align select, input, icon */
-    flex: 1;      /* Take full available width */
-    min-width: 300px;
-    max-width: 600px;    /* Limit width on large screens */
-    align-items: center;
-    background-color: white;   /* White search bar */
-    border-radius: 5px;       /* Slightly rounded edges */
-    overflow: hidden;    /* Prevent children from overflowing */
-    height: 40px;    /* Standard Amazon height */
-}
-
-/* Dropdown (All) */
-.header__searchSelect {
-    border: none;       /* Remove browser border */
-    outline: none;    /* Remove focus outline */
-    padding: 5px;
-    background-color: #e6e6e6;    /* Gray select background */
+    width: 100px;
+    object-fit: contain;
     cursor: pointer;
 }
 
-/* Input box */
-.header__searchInput {
-    flex: 1;    /* Input expands to fill space */
+/* Delivery */
+.header__delivery {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+.header__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+    height: 40px;
+    background-color: rgb(145, 167, 17);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header__searchSelect {
+    padding: 8px 10px;
     border: none;
     outline: none;
-    padding: 10px;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.header__searchInput {
+    flex: 1;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
     font-size: 12px;
 }
 
-/* Search icon */
 .header__searchIcon {
-    background-color: #c20c45;    /* Amazon search button color */
-    padding: 10px;
     width: 40px;
-    font-size: 20px;
-    cursor: pointer;
+    height: 60%;
+    padding: 5px;
+    background-color: #db7a0a;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* =========================================
-   RIGHT NAVIGATION SECTION
-   ========================================= */
+   RIGHT NAVIGATION
+========================================= */
 .header__nav {
-    display: flex;    /* Horizontal layout */
-    align-items:center;   /* Align items to bottom */
+    display: flex;
+    align-items: center;
     gap: 20px;
-    /* Space between nav items */
 }
 
-
-/* =========================================
-   NAV SINGLE OPTION BLOCK
-   (Deliver to, Account, Returns)
-   ========================================= */
+/* Nav option */
 .header__option {
     display: flex;
-    flex-direction: column;   
-     /* Text stacked vertically */
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .header__optionLineOne {
     font-size: 12px;
-        /* Small top text */
 }
 
 .header__optionLineTwo {
-    font-size: 12px;    
-    /* Larger bottom text */
+    font-size: 14px;
     font-weight: bold;
 }
-
 
 /* =========================================
-   SHOPPING CART AREA
-   ========================================= */
-.header__basket {
+   FLAG SELECT (FIXED SIZE)
+========================================= */
+.header__flagSelect {
     display: flex;
     align-items: center;
+    gap: 5px;
+}
+
+.header__flagSelect img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.header__flagSelect select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* =========================================
+   CART
+========================================= */
+.header__cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 6px;
+    border-radius: 5px;
     color: rgb(166, 218, 23);
+    position: relative;
 }
 
-.header__basketIcon {
-    font-size: 28px;
-    margin-right: 5px;
+.header__cartIcon {
+    font-size: 26px;
 }
 
-.header__basketCount {
+.header__cartCount {
+    position: absolute;
+    left: 19px;
+    right: 4px;
+    font-size: 14px;
     font-weight: bold;
-    font-size: 16px;
+    color: chocolate;
 }
+
+/* =========================================
+   HOVER EFFECTS
+========================================= */
+.lower__headercontainer ul li:hover{
+    border: 1px solid rgb(233, 11, 11);
+   
+    }
+
+
+.header__logoLink:hover,
+.header__delivery:hover,
+.header__option:hover,
+.header__cart:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__searchIcon:hover {
+    background-color: rgb(128, 212, 43);
+}
+/* =========================================
+LOWER HEADER STYLES  
+========================================= */
+
+.lower__headercontainer {
+    /* margin-top: 5px; */
+    background-color: #227805;
+    /* padding: 10px; */
+}
+.lower__headercontainer ul {
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    font-size: 12px;
+    color: tomato;
+    
+   
+}
+.lower__headercontainer ul li {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lower__headercontainer ul li:first-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;   
+   
+}
+
