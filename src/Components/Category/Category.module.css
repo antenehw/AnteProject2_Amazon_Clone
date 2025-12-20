@@ -1,193 +1,89 @@
 /* =========================================
-   Category Cards & Grid
-   ========================================= */
-
-/* Container for all categories */
+   Container & Grid for Category Cards
+========================================= */
 .container {
+    position: relative;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
-/* Section heading */
-.heading {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #111;
-    text-align: center;
-}
-
-/* Grid layout for category cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    /* center cards */
 }
 
-/* Individual category card */
-.card {
+/* =========================================
+   Individual Category Card
+========================================= */
+.category {
+    height: 300px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
     padding: 10px;
+    margin: 0;
+    /* spacing handled by grid gap */
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #fff;
 }
 
-.card:hover {
+.category:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* Image inside card */
-.imageWrapper {
+.category img {
     width: 100%;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 8px;
+    height: 200px;
+    object-fit: contain;
     margin-bottom: 10px;
 }
 
-.imageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Category name */
-.name {
-    font-size: 1.1rem;
+/* Category title */
+.category p {
+    font-size: 14px;
     font-weight: 500;
+    color: #111;
     text-align: center;
 }
 
-/* Empty state message */
-.empty {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #777;
-    margin-top: 50px;
-}
-
-/* =========================================
-   Product Full Info (CategoryFullinfos)
-   ========================================= */
-
-.product_full_info {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.back_link {
-    display: inline-block;
-    margin-bottom: 15px;
-    text-decoration: none;
-    color: #007185;
-    font-weight: 500;
-}
-
-.full_info_container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.full_info_img {
-    flex: 1 1 400px;
-    max-width: 400px;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-.full_info_text {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.title {
-    font-size: 1.6rem;
+/* Optional: price and rating inside card */
+.price {
+    font-size: 14px;
     font-weight: 600;
+    color: #b12704;
+    margin: 5px 0;
 }
 
-.rating small {
-    margin-left: 5px;
+.rating {
+    font-size: 12px;
     color: #555;
 }
 
-.price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #b12704;
-}
-
-.description {
-    font-size: 1rem;
-    color: #333;
-}
-
-.button {
-    background-color: #f0c14b;
-    border: 1px solid #a88734;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.button:hover {
-    background-color: #e2b33b;
-}
-
-.not_found {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #777;
-    margin-top: 50px;
-}
-
 /* =========================================
-   Category Products Grid responsiveness
-   ========================================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* slightly larger min width */
-    gap: 20px;
-}
-
-.imageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* ensures image covers the container */
-
-
-}
-
-/* Add some spacing on smaller screens */
-
+   Responsive adjustments
+========================================= */
 @media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
     .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
 
-    .card {
-        padding: 8px;
+    .category {
+        height: 300px;
     }
 
-    .imageWrapper {
-        height: 120px;
+    .category img {
+        height: 150px;
     }
 }

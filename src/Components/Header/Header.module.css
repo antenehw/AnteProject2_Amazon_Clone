@@ -5,7 +5,7 @@
     background-color: #0f7a05;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     padding: 10px;
     color: white;
     position: sticky;
@@ -19,7 +19,7 @@
 .header__left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 /* Logo */
@@ -45,6 +45,8 @@
     cursor: pointer;
     padding: 4px 6px;
     border-radius: 5px;
+
+
 }
 
 /* =========================================
@@ -54,12 +56,13 @@
     display: flex;
     align-items: center;
     flex: 1;
-    min-width: 300px;
-    max-width: 700px;
+    min-width: 600px;
+    max-width: 900px;
     height: 40px;
     background-color: rgb(145, 167, 17);
     border-radius: 5px;
     overflow: hidden;
+    gap: 5px;
 }
 
 .header__searchSelect {
@@ -109,13 +112,24 @@
     cursor: pointer;
 }
 
+.header__orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .header__optionLineOne {
     font-size: 12px;
+    color: #fff;
 }
 
 .header__optionLineTwo {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #fff;
 }
 
 /* =========================================
@@ -171,15 +185,12 @@
 /* =========================================
    HOVER EFFECTS
 ========================================= */
-.lower__headercontainer ul li:hover{
-    border: 1px solid rgb(233, 11, 11);
-   
-    }
 
 
 .header__logoLink:hover,
 .header__delivery:hover,
 .header__option:hover,
+.header__orders:hover,
 .header__cart:hover {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.1);
@@ -188,34 +199,61 @@
 .header__searchIcon:hover {
     background-color: rgb(128, 212, 43);
 }
+
+.lower__headercontainer ul li:hover {
+    border: 1px solid rgb(233, 11, 11);
+
+
+}
+
 /* =========================================
 LOWER HEADER STYLES  
 ========================================= */
 
-.lower__headercontainer {
+.lower__container {
     /* margin-top: 5px; */
-    background-color: #227805;
+    background-color: #037f03;
     /* padding: 10px; */
 }
-.lower__headercontainer ul {
-    display: flex;
+
+.lower__container ul {
+    display: inline-flex;
     list-style-type: none;
     gap: 5px;
     font-size: 12px;
-    color: tomato;
-    
-   
+    color: #fff;
+
+
 }
-.lower__headercontainer ul li {
+
+.lower__container ul li {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.lower__headercontainer ul li:first-child {
+.lower__container ul li:first-child {
     display: flex;
     align-items: center;
-    gap: 5px;   
-   
+    gap: 5px;
+
 }
 
+/* =================================================
+Lower Hover Styles
+================================================= */
+.lower__container ul:hover,
+.lower__container ul li:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__searchIcon:hover {
+    background-color: rgb(128, 212, 43);
+}
+
+.lower__headercontainer ul li:hover {
+    border: 1px solid rgb(233, 11, 11);
+
+
+}

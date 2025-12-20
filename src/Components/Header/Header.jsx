@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import LowerHeader from "./LowerHeader";
 
-function Header() {
+
+const Header = () => {
   return (
+    <>
     <header className={modularcss.header}>
-     
+    
       {/* LEFT SECTION: Logo + Delivery */}
       <div className={modularcss.header__left}>
         {/* Logo */}
         <Link to="/" className={modularcss.header__logoLink}>
           <img
             className={modularcss.header__logo}
-            src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-            alt="Amazon Logo"
-          />
+            src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon Logo" />
         </Link>
 
         {/* Delivery Location */}
         <div className={modularcss.header__delivery}>
-          <span className={modularcss.header__deliveryIcon}>📍</span>
+          <span className={modularcss.header__deliveryIcon}></span>
           <div className={modularcss.header__deliveryText}>
             <p>Deliver to G-3</p>
             <span>Evangadi</span>
@@ -68,31 +68,28 @@ function Header() {
         </div>
 
         {/* Account */}
-        <div className={modularcss.header__option}>
+        <Link to="/SignUp" className={modularcss.header__option}>
           <p className={modularcss.header__optionLineOne}>Hello, sign in</p>
           <p className={modularcss.header__optionLineTwo}>Account & Lists</p>
-        </div>
+        </Link>
 
         {/* Orders */}
-        <div className={modularcss.header__option}>
+        <Link to="/orders" className={modularcss.header__orders}>
           <p className={modularcss.header__optionLineOne}>Returns</p>
           <p className={modularcss.header__optionLineTwo}>& Orders</p>
-        </div>
-
+        </Link>
         {/* Cart */}
-        <Link to="/checkout" className={modularcss.header__cart}>
+        <Link to="/cart" className={modularcss.header__cart}>
           <FaShoppingCart className={modularcss.header__cartIcon} />
           <span className={modularcss.header__cartCount}>0</span>
         </Link>
       </div>
 
-      
-    {/* Lower Header Component */}
-          
-    <LowerHeader />
-      
-    </header>
-  );
-}
+       </header>
+       <LowerHeader/>
+    </>
+  )};   
+
+ 
 
 export default Header;

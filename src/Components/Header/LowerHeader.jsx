@@ -4,8 +4,9 @@ import modularcss from './Header.module.css';
 
 function LowerHeader() {
 return (
-<div className={modularcss.lower__headercontainer}>
-    <ul>
+<div className={modularcss.lower__container}>
+    
+     <ul className={modularcss.lowerHeaderList}>
         <li><AiOutlineMenuUnfold/>All</li>
         <li>Today's deal</li>
         <li>coustomer Service</li>

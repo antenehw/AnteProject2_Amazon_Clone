@@ -12,10 +12,10 @@ function Product() {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
-        // Normalize API data to match your app structure
+        
         const normalizedProducts = res.data.map((p) => ({
           ...p,
-          img: p.image, // ✅ matches ProductCard
+          img: p.image, 
         }));
 
         setProducts(normalizedProducts);

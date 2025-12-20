@@ -1,18 +1,19 @@
 import React from "react";
-import modularcss from "./Category.module.css";
-import CategoryCard from "./CategoryCard";
+import CategoryInfos from "./CategoryFullInfos";
+import CategoryCard from './CategoryCard';
+import styles from './Category.module.css';
 
-function Category({ categories }) {
-  if (!categories || categories.length === 0) {
-    return <p className={modularcss.empty}>No categories available.</p>;
-  }
-
+function Category() {
+   // Filter only electronics
+  const electronicsProducts = CategoryInfos.filter(
+    (item) => item.category === "electronics"
+  );
+  
   return (
-    <div className={modularcss.container}>
-      <h2 className={modularcss.heading}>Shop by Category</h2>
-      <div className={modularcss.grid}>
-        {categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
+    <div className={styles.container}>
+      <div className={styles.grid}>
+        {CategoryInfos.map((infos) => (
+          <CategoryCard key={infos.id} data={infos}/> 
         ))}
       </div>
     </div>
