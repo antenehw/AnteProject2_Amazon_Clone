@@ -1,21 +1,32 @@
 import React from "react";
-import modularcss from "./Category.module.css";
+import CategoryFullInfos from "./CategoryFullInfos";
 import CategoryCard from "./CategoryCard";
+import Classes from "./Category.module.css";
+import { useParams } from "react-router-dom";
 
-function Category({ categories }) {
-  if (!categories || categories.length === 0) {
-    return <p className={modularcss.empty}>No categories available.</p>;
-  }
+
+function Category({name: propName }) {
+  const params = useParams();
+  const name = params.name || propName;
+
+  const filteredProducts = CategoryFullInfos.filter(
+    (item) => item.name === name
+  );
 
   return (
-    <div className={modularcss.container}>
-      <h2 className={modularcss.heading}>Shop by Category</h2>
-      <div className={modularcss.grid}>
-        {categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
+    <>
+      <div className={Classes.category_page}>
+        <h2 className={Classes.category_title}>{name}</h2>
+
+        
       </div>
-    </div>
+
+      <section className={Classes.category__container}>
+        {CategoryFullInfos.map((data) => (
+          <CategoryCard key={data.id} data={data} />
+        ))}
+      </section>
+    </>
   );
 }
 

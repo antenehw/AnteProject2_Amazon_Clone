@@ -1,25 +1,26 @@
-/* Container for all products */
+/* ======================================
+   PRODUCT GRID CONTAINER
+====================================== */
 .products_container {
     display: flex;
     flex-wrap: wrap;
-    /* allow multiple rows */
     gap: 20px;
-    /* spacing between cards */
     justify-content: center;
-    /* center the row */
     padding: 20px;
 }
 
-/* Each product card */
+/* ======================================
+   PRODUCT CARD (GRID MODE)
+====================================== */
 .product_card {
     flex: 1 1 220px;
-    /* base width for 3–4 per row */
-    max-width: 250px;
-    /* limit card width */
-    background-color: #f3f3f3;
+    max-width: 600px;
+    background: #ffffff;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product_card:hover {
@@ -27,34 +28,46 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.product_link {
+/* ======================================
+   LINK STYLING
+====================================== */
+.product_link,
+.product_title_link,
+.product_image_link {
     text-decoration: none;
-    color: #111;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+    color: inherit;
 }
 
-/* Product image */
+/* ======================================
+   PRODUCT IMAGE
+====================================== */
 .product_img {
-    width: 100%;
+    width: 250px;
     height: 200px;
     object-fit: contain;
-    border-radius: 5px;
     background-color: #fff;
+    border-radius: 5px;
 }
 
-/* Product info */
+/* ======================================
+   PRODUCT INFO
+====================================== */
 .product_info {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
 .product_title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
+    margin: 0;
+}
+
+.product_description {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
 }
 
 .product_rating {
@@ -65,22 +78,69 @@
 }
 
 .product_price {
-    margin-top: 5px;
     font-size: 16px;
     font-weight: bold;
+    color: darkslateblue;
 }
 
-/* Responsive adjustments */
+/* ======================================
+   BUTTON
+====================================== */
+.button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #8af510;
+}
+
+/* ======================================
+   FLEX MODE (DETAIL PAGE)
+====================================== */
+.product_flexed {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.product_flexed .product_img {
+    width: 300px;
+    height: auto;
+}
+
+.product_image_wrapper {
+    flex-shrink: 0;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
 @media (max-width: 1024px) {
     .product_card {
         flex: 1 1 45%;
-        /* 2 per row on tablet */
     }
 }
 
 @media (max-width: 600px) {
     .product_card {
         flex: 1 1 100%;
-        /* 1 per row on mobile */
+    }
+
+    .product_flexed {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product_flexed .product_img {
+        width: 80%;
     }
 }

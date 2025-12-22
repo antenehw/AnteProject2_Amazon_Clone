@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 10px;
+    padding: 5px;
     color: white;
     position: sticky;
     top: 0;
@@ -19,7 +19,7 @@
 .header__left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 /* Logo */
@@ -28,12 +28,12 @@
     align-items: center;
     padding: 4px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .header__logo {
     width: 100px;
     object-fit: contain;
-    cursor: pointer;
 }
 
 /* Delivery */
@@ -54,12 +54,15 @@
     display: flex;
     align-items: center;
     flex: 1;
-    min-width: 300px;
-    max-width: 700px;
+    min-width: 600px;
+    max-width: 1000px;
     height: 40px;
     background-color: rgb(145, 167, 17);
     border-radius: 5px;
     overflow: hidden;
+    gap: 5px;
+    position: relative;
+    z-index: 1;
 }
 
 .header__searchSelect {
@@ -90,6 +93,10 @@
     cursor: pointer;
 }
 
+.header__searchIcon:hover {
+    background-color: rgb(128, 212, 43);
+}
+
 /* =========================================
    RIGHT NAVIGATION
 ========================================= */
@@ -99,27 +106,22 @@
     gap: 20px;
 }
 
-/* Nav option */
-.header__option {
+/* Nav options (SignIn, Orders, etc.) */
+.header__Account,
+.header__orders {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4px 6px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.header__optionLineOne {
-    font-size: 12px;
-}
-
-.header__optionLineTwo {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: lighter;
+    color: #fff;
 }
 
 /* =========================================
-   FLAG SELECT (FIXED SIZE)
+   FLAG SELECT
 ========================================= */
 .header__flagSelect {
     display: flex;
@@ -153,6 +155,7 @@
     border-radius: 5px;
     color: rgb(166, 218, 23);
     position: relative;
+    cursor: pointer;
 }
 
 .header__cartIcon {
@@ -162,7 +165,6 @@
 .header__cartCount {
     position: absolute;
     left: 19px;
-    right: 4px;
     font-size: 14px;
     font-weight: bold;
     color: chocolate;
@@ -171,51 +173,59 @@
 /* =========================================
    HOVER EFFECTS
 ========================================= */
-.lower__headercontainer ul li:hover{
-    border: 1px solid rgb(233, 11, 11);
-   
-    }
-
-
 .header__logoLink:hover,
 .header__delivery:hover,
-.header__option:hover,
+.header__Account:hover,
+.header__orders:hover,
+.header__search:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.header__searchIcon:hover {
+    background-color: rgb(128, 212, 43);
+}
+.header__flagSelect:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 4px 6px;
+}
 .header__cart:hover {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.header__searchIcon:hover {
-    background-color: rgb(128, 212, 43);
-}
 /* =========================================
-LOWER HEADER STYLES  
+   LOWER HEADER
 ========================================= */
+.lower__container {
+    background-color: #037f03;
+   margin-left: auto;
+}
 
-.lower__headercontainer {
-    /* margin-top: 5px; */
-    background-color: #227805;
-    /* padding: 10px; */
-}
-.lower__headercontainer ul {
-    display: flex;
+.lower__container ul {
+    display: inline-flex;
     list-style-type: none;
-    gap: 5px;
-    font-size: 12px;
-    color: tomato;
-    
-   
+    gap: 2px;
+    font-size: 14px;
+    color: #fff;
 }
-.lower__headercontainer ul li {
+
+.lower__container ul li {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.lower__headercontainer ul li:first-child {
+.lower__container ul li:first-child {
     display: flex;
     align-items: center;
-    gap: 5px;   
-   
+    gap: 5px;
+    margin-left: auto;
 }
 
+/* Lower hover */
+.lower__container ul li:hover {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}

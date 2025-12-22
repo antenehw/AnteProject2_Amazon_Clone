@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import "./index.css"; // Global CSS if any
+import DataProvider from "./Components/DataProvider/DataProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <DataProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </DataProvider>
 );
 
 

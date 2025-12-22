@@ -1,193 +1,106 @@
 /* =========================================
-   Category Cards & Grid
-   ========================================= */
-
-/* Container for all categories */
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+   Category Page Wrapper
+========================================= */
+.category_page {
+    width: 100%;
+    padding: 20px 30px;
 }
 
-/* Section heading */
-.heading {
-    font-size: 1.8rem;
+.category_title {
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 20px;
+    text-transform: capitalize;
     color: #111;
-    text-align: center;
 }
 
-/* Grid layout for category cards */
+/* =========================================
+   Category Container & Grid
+========================================= */
+.category__container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    place-items: center;
+    padding: 20px 0;
+}
+
+/* Generic grid utility (if used elsewhere) */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    justify-items: center;
+    padding-bottom: 20px;
 }
 
-/* Individual category card */
+/* =========================================
+   Category Card
+========================================= */
 .card {
+    width: 250px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #fff;
+
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-/* Image inside card */
-.imageWrapper {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.imageWrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Category name */
-.name {
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-/* Empty state message */
-.empty {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #777;
-    margin-top: 50px;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================
-   Product Full Info (CategoryFullinfos)
-   ========================================= */
-
-.product_full_info {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.back_link {
-    display: inline-block;
-    margin-bottom: 15px;
+   Card Link
+========================================= */
+.link {
     text-decoration: none;
-    color: #007185;
-    font-weight: 500;
-}
-
-.full_info_container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.full_info_img {
-    flex: 1 1 400px;
-    max-width: 400px;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-.full_info_text {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.title {
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.rating small {
-    margin-left: 5px;
-    color: #555;
-}
-
-.price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #b12704;
-}
-
-.description {
-    font-size: 1rem;
-    color: #333;
-}
-
-.button {
-    background-color: #f0c14b;
-    border: 1px solid #a88734;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.button:hover {
-    background-color: #e2b33b;
-}
-
-.not_found {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #777;
-    margin-top: 50px;
+    color: inherit;
+    width: 100%;
+    text-align: end;
+    font-size: 12px;
 }
 
 /* =========================================
-   Category Products Grid responsiveness
-   ========================================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* slightly larger min width */
-    gap: 20px;
-}
-
-.imageWrapper img {
+   Card Image
+========================================= */
+.image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* ensures image covers the container */
-
-
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 12px;
 }
 
-/* Add some spacing on smaller screens */
-
+/* =========================================
+   Responsive
+========================================= */
 @media (max-width: 600px) {
-    .container {
-        padding: 10px;
+    .category_page {
+        padding: 15px;
+    }
+
+    .category_title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
     }
 
     .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
 
     .card {
-        padding: 8px;
+        width: 100%;
+        padding: 12px;
     }
 
-    .imageWrapper {
-        height: 120px;
+    .image {
+        height: 150px;
     }
 }

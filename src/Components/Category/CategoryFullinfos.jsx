@@ -1,60 +1,33 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
-import Rating from "@mui/material/Rating";
-import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
-import modularcss from "./Category.module.css";
 
-function CategoryFullinfos({ products }) {
-  const { categoryId, productId } = useParams();
-  const prodId = Number(productId);
 
-  // Find the product by ID
-  const product = products.find((p) => p.id === prodId);
+const CategoryFullInfos = [
+  {
+    id: 1,
+    name: "electronics",
+    title: "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+    imageLink: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+  },
 
-  if (!product) {
-    return <h2 className={modularcss.not_found}>Product not found</h2>;
-  }
+  {
+    id: 2,
+    name: "men's clothing",
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    imageLink: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+  },
 
-  const { img, title, price, rating, description } = product;
+  {
+    id: 3,
+    name: "jewelery",
+    title: "White Gold Plated Princess",
+    imageLink: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+  },
 
-  return (
-    <div className={modularcss.product_full_info}>
-      {/* Back link */}
-      <Link to={`/category/${categoryId}`} className={modularcss.back_link}>
-        ← Back to Category
-      </Link>
+  {
+    id: 4,
+    name: "women's clothing",
+    title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    imageLink: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png",
+  },
+];
 
-      {/* Product main info */}
-      <div className={modularcss.full_info_container}>
-        <img
-          src={img || "https://via.placeholder.com/400"}
-          alt={title}
-          className={modularcss.full_info_img}
-        />
-
-        <div className={modularcss.full_info_text}>
-          <h2 className={modularcss.title}>{title}</h2>
-
-          {rating && (
-            <div className={modularcss.rating}>
-              <Rating value={rating.rate} precision={0.1} readOnly />
-              <small>({rating.count})</small>
-            </div>
-          )}
-
-          <div className={modularcss.price}>
-            <CurrencyFormat amount={price} />
-          </div>
-
-          {description && (
-            <p className={modularcss.description}>{description}</p>
-          )}
-
-          <button className={modularcss.button}>Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default CategoryFullinfos;
+export default CategoryFullInfos;
