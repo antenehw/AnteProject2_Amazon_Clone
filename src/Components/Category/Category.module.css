@@ -1,4 +1,5 @@
 /* =========================================
+<<<<<<< HEAD
    Category Page Wrapper
 ========================================= */
 .category_page {
@@ -90,17 +91,102 @@
         margin-bottom: 15px;
     }
 
+=======
+   Container & Grid for Category Cards
+========================================= */
+.container {
+    position: relative;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    /* center cards */
+}
+
+/* =========================================
+   Individual Category Card
+========================================= */
+.category {
+    height: 300px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    /* spacing handled by grid gap */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside card */
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Category title */
+.category p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    text-align: center;
+}
+
+/* Optional: price and rating inside card */
+.price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b12704;
+    margin: 5px 0;
+}
+
+.rating {
+    font-size: 12px;
+    color: #555;
+}
+
+/* =========================================
+   Responsive adjustments
+========================================= */
+@media (max-width: 600px) {
+>>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
 
+<<<<<<< HEAD
     .card {
         width: 100%;
         padding: 12px;
     }
 
     .image {
+=======
+    .category {
+        height: 300px;
+    }
+
+    .category img {
+>>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
         height: 150px;
     }
 }

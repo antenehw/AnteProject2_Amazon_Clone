@@ -12,7 +12,17 @@ function Product() {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
+<<<<<<< HEAD
         setProducts(res.data);
+=======
+        
+        const normalizedProducts = res.data.map((p) => ({
+          ...p,
+          img: p.image, 
+        }));
+
+        setProducts(normalizedProducts);
+>>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
         setLoading(false);
       })
       .catch((err) => {
