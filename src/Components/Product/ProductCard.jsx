@@ -6,21 +6,18 @@ import modularcss from "./Product.module.css";
 import { Type } from "../../Utility/action.type";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 
+
 function ProductCard({ product, flex }) {
   const { id, title, image, price, description, rating = { rate: 0, count: 0 } } = product;
-
+  
   const [state, dispatch] = useContext(DataContext);
+  console.log(state)
 
-  const AddToCart = () => {
+  const AddToBasket = () => {
     dispatch({
       type: Type.ADD_TO_BASKET,
       item: {
-        id,
-        title,
-        image,
-        price,
-        description,
-        rating,
+        id, title, image, price, description, rating 
       },
     });
   };
@@ -55,8 +52,8 @@ function ProductCard({ product, flex }) {
         </div>
 
         {/* Add to Cart */}
-        <button className={modularcss.button} onClick={AddToCart}>
-          Add to Cart
+        <button className={modularcss.button} onClick={AddToBasket}>
+          Add to Basket
         </button>
       </div>
     </div>

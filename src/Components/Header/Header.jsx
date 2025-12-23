@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import modularcss from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import LowerHeader from "./LowerHeader";
+import { DataContext } from "../DataProvider/DataProvider";
 
 
 const Header = () => {
+  const [{basket}] = useContext(DataContext)
+  // console.log(basket.length);
+
   return (
     <>
     <header className={modularcss.header}>
@@ -16,12 +20,9 @@ const Header = () => {
         <Link to="/" className={modularcss.header__logoLink}>
           <img
             className={modularcss.header__logo}
-<<<<<<< HEAD
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" 
             alt="Amazon Logo" />
-=======
-            src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon Logo" />
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
+
         </Link>
 
         {/* Delivery Location */}
@@ -73,35 +74,27 @@ const Header = () => {
         </div>
 
         {/* Account */}
-<<<<<<< HEAD
+
         <Link to="/Account" className={modularcss.header__Account}>
           <p>SignIn & Account </p>
-         
-=======
-        <Link to="/SignUp" className={modularcss.header__option}>
-          <p className={modularcss.header__optionLineOne}>Hello, sign in</p>
-          <p className={modularcss.header__optionLineTwo}>Account & Lists</p>
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
         </Link>
 
         {/* Orders */}
         <Link to="/orders" className={modularcss.header__orders}>
-<<<<<<< HEAD
           <p>Returns & Orders</p>
-=======
-          <p className={modularcss.header__optionLineOne}>Returns</p>
-          <p className={modularcss.header__optionLineTwo}>& Orders</p>
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
         </Link>
+
         {/* Cart */}
         <Link to="/cart" className={modularcss.header__cart}>
           <FaShoppingCart className={modularcss.header__cartIcon} />
-          <span className={modularcss.header__cartCount}>0</span>
+          <span className={modularcss.header__cartCount}>{basket.length}</span>
         </Link>
+
       </div>
 
-       </header>
-       <LowerHeader/>
+      </header>
+
+    <LowerHeader/>
     </>
   )};   
 

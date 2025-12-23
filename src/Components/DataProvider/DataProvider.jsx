@@ -1,9 +1,10 @@
+
 import React, { createContext, useReducer } from "react";
 import { reducer, initialState } from "../../Utility/reducer";
 
 export const DataContext = createContext();
 
-const DataProvider = ({ children }) => {
+export const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
