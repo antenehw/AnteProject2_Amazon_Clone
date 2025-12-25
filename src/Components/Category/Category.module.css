@@ -9,7 +9,11 @@
 
 .category_title {
     font-size: 1.8rem;
+<<<<<<< HEAD
     font-weight: 400;
+=======
+    font-weight: 700;
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     margin-bottom: 20px;
     text-transform: capitalize;
     color: #111;
@@ -20,7 +24,11 @@
     font-size: 1rem;
     font-weight: 600;
     text-transform: capitalize;
+<<<<<<< HEAD
     color: #b1bf13;
+=======
+    color: #333;
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     text-align: center;
 }
 

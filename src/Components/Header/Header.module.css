@@ -83,8 +83,13 @@ SEARCH BAR
 
 .header__searchIcon {
     width: 45px;
+<<<<<<< HEAD
     height:80%;
     background-color: #f58d16;
+=======
+    height: 100%;
+    background-color: #db7a0a;
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +106,7 @@ RIGHT NAVIGATION
 .header__nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .header__Account,
@@ -111,10 +116,21 @@ RIGHT NAVIGATION
     align-items: center;
     padding: 4px 6px;
     border-radius: 5px;
+<<<<<<< HEAD
     font-size: 14px;
     font-weight: bold;
     color: #fff;
 }
+=======
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+         
+}
+
+
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 
 /* =========================================
 FLAG SELECT
@@ -163,14 +179,22 @@ CART
 .header__cartCount {
     position: absolute;
     top: -2px;
+<<<<<<< HEAD
     left: 30px;
+=======
+    left: 18px;
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     font-size: 14px;
     font-weight: bold;
     color: chocolate;
 }
 
 /* =========================================
+<<<<<<< HEAD
 HEADER HOVER EFFECTS
+=======
+   HEADER HOVER EFFECTS
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 ========================================= */
 .header__logoLink:hover,
 .header__delivery:hover,
@@ -187,14 +211,22 @@ LOWER HEADER
 ========================================= */
 .lower__container {
     background-color: #037f03;
+<<<<<<< HEAD
 
+=======
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 }
 
 .lower__container ul {
     display: inline-flex;
     list-style-type: none;
+<<<<<<< HEAD
     gap: 10px;
     font-size: 14px;
+=======
+    gap: 5px;
+    font-size: 12px;
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     color: #fff;
 }
 
@@ -208,11 +240,18 @@ LOWER HEADER
     display: flex;
     align-items: center;
     gap: 5px;
+<<<<<<< HEAD
     margin-left: 10px;
+=======
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 }
 
 /* Lower hover */
 .lower__container ul li:hover {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.1);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
