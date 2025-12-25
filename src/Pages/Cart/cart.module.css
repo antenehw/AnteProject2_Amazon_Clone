@@ -1,0 +1,112 @@
+/* Layout wrapper */
+.container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    top: 20px;    
+    justify-content: center;
+
+}
+
+/* Main cart container */
+.cart__container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    display: block;
+    flex-direction: row;
+    gap: 50px;
+}
+
+/* Subtotal section */
+.subtotalBox {
+
+    margin-top: 20px;
+    padding: 20px;
+    background: #e4e6df;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subtotal {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Gift checkbox */
+.giftOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkout button */
+.checkoutBtn {
+    background: #bedf2a;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #fcd200;
+    transition: background 0.2s ease;
+}
+
+.checkoutBtn:hover {
+    background: #00f7b1;
+    color: light rgb(111, 0, 128);
+}
+
+/* -------------------------------------- */
+/* 📱 TABLET RESPONSIVE (768px and below) */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+    .cart__container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .subtotalBox {
+        padding: 15px;
+    }
+
+    .subtotal {
+        font-size: 16px;
+    }
+
+    .checkoutBtn {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* -------------------------------------- */
+/* 📱 MOBILE RESPONSIVE (480px and below) */
+/* -------------------------------------- */
+@media (max-width: 480px) {
+    .cart__container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .subtotalBox {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .subtotal {
+        font-size: 15px;
+    }
+
+    .giftOption small {
+        font-size: 13px;
+    }
+
+    .checkoutBtn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

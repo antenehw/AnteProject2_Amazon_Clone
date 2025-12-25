@@ -14,13 +14,14 @@
 ====================================== */
 .product_card {
     flex: 1 1 220px;
-    max-width: 600px;
+    max-width: 800px;
     background: #ffffff;
     border-radius: 8px;
-    overflow: hidden;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    gap: 30px;
 }
 
 .product_card:hover {
@@ -28,8 +29,25 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* ====================================== 
+ADD TO CART BUTTON (HIDE BY DEFAULT) 
+====================================== */
+.add_to_cart_btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+/* Show button on hover */
+.product_card:hover .add_to_cart_btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /* ======================================
-   LINK STYLING
+LINK STYLING
 ====================================== */
 .product_link,
 .product_title_link,
@@ -39,7 +57,7 @@
 }
 
 /* ======================================
-   PRODUCT IMAGE
+PRODUCT IMAGE
 ====================================== */
 .product_img {
     width: 250px;
@@ -50,7 +68,7 @@
 }
 
 /* ======================================
-   PRODUCT INFO
+PRODUCT INFO
 ====================================== */
 .product_info {
     display: flex;
@@ -102,11 +120,11 @@
 }
 
 /* ======================================
-   FLEX MODE (DETAIL PAGE)
+FLEX MODE (DETAIL PAGE)
 ====================================== */
 .product_flexed {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     align-items: flex-start;
     padding: 25px;
 }
@@ -120,8 +138,42 @@
     flex-shrink: 0;
 }
 
+
 /* ======================================
-   RESPONSIVE
+Quantity Controls
+====================================== */
+.qty_controls {
+    display:grid;
+    align-items:normal;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.qty_controls button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #a5bc79;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.qty_controls span {
+    font-weight: bold;
+}
+
+.remove_btn {
+    margin-left: auto;
+    background: #4d7fff;
+    color: rgb(126, 3, 3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    
+}
+
+/* ======================================
+RESPONSIVE
 ====================================== */
 @media (max-width: 1024px) {
     .product_card {

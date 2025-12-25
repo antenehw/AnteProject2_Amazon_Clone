@@ -6,59 +6,85 @@ import modularcss from "./Product.module.css";
 import { Type } from "../../Utility/action.type";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 
-function ProductCard({ product, flex }) {
+function ProductCard({ product, flex, showCheckbox}) {
   const { id, title, image, price, description, rating = { rate: 0, count: 0 } } = product;
 
   const [state, dispatch] = useContext(DataContext);
 
-  const AddToCart = () => {
-    dispatch({
+  const AddToBasket = () => {
+      dispatch({
       type: Type.ADD_TO_BASKET,
-      item: {
-        id,
-        title,
-        image,
-        price,
-        description,
-        rating,
-      },
+      item: { id, title, image, price, description, rating },
     });
   };
 
   return (
-    <div className={`${modularcss.product_card} ${flex ? modularcss.product_flexed : ""}`}>
+    <div className={`${modularcss.product_card} ${
+      flex ? modularcss.product_flexed : ""}`}>
       
-      {/* Image Link */}
-      <Link to={`/products/${id}`} className={modularcss.product_image_link}>
-        <img src={image} alt={title} className={modularcss.product_img} />
-      </Link>
+      {/* Checkbox only in cart */}
+      {showCheckbox && (
+          <input type="checkbox" 
+          checked={product.selected} 
+          onChange={() =>
+              dispatch({ type: Type.TOGGLE_SELECT_ITEM, id: product.id })
+            }
+            className={modularcss.checkbox}
+          />
+        )}
 
-      <div className={modularcss.product_info}>
+      {/* Image */}
+        <Link to={`/products/${id}`} className={modularcss.product_image_link}>
+        <img src={image} alt={title} className={modularcss.product_img} />
+        </Link>
+
+        <div className={modularcss.product_info}>
         
-        {/* Title Link */}
+      {/* Title */}
         <Link to={`/products/${id}`} className={modularcss.product_title_link}>
           <h3 className={modularcss.product_title}>{title}</h3>
         </Link>
 
-        {/* Description only in flex mode */}
+      {/* Description (only in flex mode) */}
         {flex && <p className={modularcss.product_description}>{description}</p>}
 
-        {/* Rating */}
+      {/* Rating */}
         <div className={modularcss.product_rating}>
           <Rating value={rating.rate} precision={0.1} readOnly />
           <small>({rating.count})</small>
         </div>
 
-        {/* Price */}
+      {/* Price */}
         <div className={modularcss.product_price}>
           <CurrencyFormat amount={price} />
         </div>
 
-        {/* Add to Cart */}
-        <button className={modularcss.button} onClick={AddToCart}>
+      {/* Add to Cart */}
+        <button className={modularcss.add_to_cart_btn} onClick={AddToBasket}>
           Add to Cart
         </button>
-      </div>
+        
+        </div>
+
+
+      {/* Quantity controls (cart only) */}
+        {flex && (
+          <div className={modularcss.qty_controls}>
+          <button onClick={() => dispatch({ type: Type.DECREASE_QTY, id })}>-</button>
+            <span>{product.amount}</span>
+            <button onClick={() => dispatch({ type: Type.INCREASE_QTY, id })}>+</button>
+
+          <button 
+          className={modularcss.remove_btn}
+          onClick={() =>
+            dispatch({ type: Type.REMOVE_FROM_BASKET, id }
+          )}>
+          Remove
+          </button>
+        </div>
+)}
+
+
     </div>
   );
 }

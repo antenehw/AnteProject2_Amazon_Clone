@@ -1,22 +1,31 @@
 /* =========================================
-<<<<<<< HEAD
-   Category Page Wrapper
+   CATEGORY PAGE (Single Category View)
 ========================================= */
 .category_page {
     width: 100%;
     padding: 20px 30px;
+    
 }
 
 .category_title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 400;
     margin-bottom: 20px;
     text-transform: capitalize;
     color: #111;
 }
 
+.category_name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #b1bf13;
+    text-align: center;
+}
+
 /* =========================================
-   Category Container & Grid
+   CATEGORY PRODUCTS GRID
 ========================================= */
 .category__container {
     margin-top: 20px;
@@ -27,7 +36,16 @@
     padding: 20px 0;
 }
 
-/* Generic grid utility (if used elsewhere) */
+/* =========================================
+   CATEGORY GRID (Home / All Categories)
+========================================= */
+.container {
+    position: relative;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -37,7 +55,7 @@
 }
 
 /* =========================================
-   Category Card
+   CATEGORY CARD (Reusable)
 ========================================= */
 .card {
     width: 250px;
@@ -45,10 +63,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -58,99 +75,29 @@
 }
 
 /* =========================================
-   Card Link
+   CARD LINK
 ========================================= */
 .link {
     text-decoration: none;
     color: inherit;
     width: 100%;
-    text-align: end;
-    font-size: 12px;
+    text-align: center;
+    font-size: 13px;
 }
 
 /* =========================================
-   Card Image
+   CARD IMAGE
 ========================================= */
 .image {
     width: 100%;
-    max-height: 200px;
+    height: 200px;
     object-fit: contain;
     margin-bottom: 12px;
 }
 
 /* =========================================
-   Responsive
+   OPTIONAL TEXT
 ========================================= */
-@media (max-width: 600px) {
-    .category_page {
-        padding: 15px;
-    }
-
-    .category_title {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-    }
-
-=======
-   Container & Grid for Category Cards
-========================================= */
-.container {
-    position: relative;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    /* center cards */
-}
-
-/* =========================================
-   Individual Category Card
-========================================= */
-.category {
-    height: 300px;
-    width: 100%;
-    max-width: 200px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    margin: 0;
-    /* spacing handled by grid gap */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-/* Image inside card */
-.category img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-/* Category title */
-.category p {
-    font-size: 14px;
-    font-weight: 500;
-    color: #111;
-    text-align: center;
-}
-
-/* Optional: price and rating inside card */
 .price {
     font-size: 14px;
     font-weight: 600;
@@ -164,29 +111,29 @@
 }
 
 /* =========================================
-   Responsive adjustments
+   RESPONSIVE
 ========================================= */
 @media (max-width: 600px) {
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
+    .category_page {
+        padding: 15px;
+    }
+
+    .category_title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
 
-<<<<<<< HEAD
     .card {
         width: 100%;
         padding: 12px;
     }
 
     .image {
-=======
-    .category {
-        height: 300px;
-    }
-
-    .category img {
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
         height: 150px;
     }
 }

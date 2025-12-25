@@ -5,16 +5,11 @@
     background-color: #0f7a05;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     gap: 20px;
-    padding: 5px;
-=======
-    gap: 30px;
-    padding: 10px;
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
+    padding: 20px 5px;
     color: white;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 100;
 }
 
@@ -31,9 +26,10 @@
 .header__logoLink {
     display: flex;
     align-items: center;
-    padding: 4px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .header__logo {
@@ -45,38 +41,26 @@
 .header__delivery {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     padding: 4px 6px;
     border-radius: 5px;
-
-
 }
 
 /* =========================================
-   SEARCH BAR
+SEARCH BAR
 ========================================= */
 .header__search {
     display: flex;
     align-items: center;
     flex: 1;
     min-width: 600px;
-<<<<<<< HEAD
-    max-width: 1000px;
-=======
-    max-width: 900px;
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
+    max-width: 850px;
     height: 40px;
-    background-color: rgb(145, 167, 17);
+    background-color: #f3f3f3;
     border-radius: 5px;
     overflow: hidden;
-    gap: 5px;
-<<<<<<< HEAD
-    position: relative;
-    z-index: 1;
-=======
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
 }
 
 .header__searchSelect {
@@ -85,6 +69,7 @@
     outline: none;
     background-color: #e6e6e6;
     cursor: pointer;
+    width:30%;
 }
 
 .header__searchInput {
@@ -93,14 +78,13 @@
     border: none;
     outline: none;
     font-size: 12px;
+    width: 60%;
 }
 
 .header__searchIcon {
-    width: 40px;
-    height: 60%;
-    padding: 5px;
-    background-color: #db7a0a;
-    font-size: 10px;
+    width: 45px;
+    height:80%;
+    background-color: #f58d16;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,7 +96,7 @@
 }
 
 /* =========================================
-   RIGHT NAVIGATION
+RIGHT NAVIGATION
 ========================================= */
 .header__nav {
     display: flex;
@@ -120,7 +104,6 @@
     gap: 20px;
 }
 
-/* Nav options (SignIn, Orders, etc.) */
 .header__Account,
 .header__orders {
     display: flex;
@@ -128,45 +111,25 @@
     align-items: center;
     padding: 4px 6px;
     border-radius: 5px;
-    cursor: pointer;
-<<<<<<< HEAD
     font-size: 14px;
-=======
-}
-
-.header__orders {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4px 6px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.header__optionLineOne {
-    font-size: 12px;
-    color: #fff;
-}
-
-.header__optionLineTwo {
-    font-size: 12px;
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
-    font-weight: lighter;
+    font-weight: bold;
     color: #fff;
 }
 
 /* =========================================
-   FLAG SELECT
+FLAG SELECT
 ========================================= */
 .header__flagSelect {
     display: flex;
     align-items: center;
     gap: 5px;
+    padding: 4px 6px;
+    border-radius: 5px;
 }
 
 .header__flagSelect img {
-    width: 24px;
-    height: 16px;
+    width: 45px;
+    height: 30px;
     object-fit: cover;
     border-radius: 2px;
 }
@@ -180,12 +143,12 @@
 }
 
 /* =========================================
-   CART
+CART
 ========================================= */
 .header__cart {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
     padding: 4px 6px;
     border-radius: 5px;
     color: rgb(166, 218, 23);
@@ -194,99 +157,49 @@
 }
 
 .header__cartIcon {
-    font-size: 26px;
+    font-size: 50px;
 }
 
 .header__cartCount {
     position: absolute;
-    left: 19px;
+    top: -2px;
+    left: 30px;
     font-size: 14px;
     font-weight: bold;
     color: chocolate;
 }
 
 /* =========================================
-   HOVER EFFECTS
+HEADER HOVER EFFECTS
 ========================================= */
-<<<<<<< HEAD
 .header__logoLink:hover,
 .header__delivery:hover,
 .header__Account:hover,
 .header__orders:hover,
-.header__search:hover {
+.header__flagSelect:hover,
+.header__cart:hover {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.15);
 }
-.header__searchIcon:hover {
-    background-color: rgb(128, 212, 43);
-}
-.header__flagSelect:hover {
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    padding: 4px 6px;
-}
-=======
 
-
-.header__logoLink:hover,
-.header__delivery:hover,
-.header__option:hover,
-.header__orders:hover,
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
-.header__cart:hover {
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-<<<<<<< HEAD
-=======
-.header__searchIcon:hover {
-    background-color: rgb(128, 212, 43);
-}
-
-.lower__headercontainer ul li:hover {
-    border: 1px solid rgb(233, 11, 11);
-
-
-}
-
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
 /* =========================================
-   LOWER HEADER
+LOWER HEADER
 ========================================= */
 .lower__container {
     background-color: #037f03;
-   margin-left: auto;
+
 }
 
-<<<<<<< HEAD
 .lower__container ul {
     display: inline-flex;
     list-style-type: none;
-    gap: 2px;
+    gap: 10px;
     font-size: 14px;
     color: #fff;
-=======
-.lower__container {
-    /* margin-top: 5px; */
-    background-color: #037f03;
-    /* padding: 10px; */
-}
-
-.lower__container ul {
-    display: inline-flex;
-    list-style-type: none;
-    gap: 5px;
-    font-size: 12px;
-    color: #fff;
-
-
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
 }
 
 .lower__container ul li {
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -295,34 +208,11 @@
     display: flex;
     align-items: center;
     gap: 5px;
-<<<<<<< HEAD
-    margin-left: auto;
+    margin-left: 10px;
 }
 
 /* Lower hover */
 .lower__container ul li:hover {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.1);
-=======
-
-}
-
-/* =================================================
-Lower Hover Styles
-================================================= */
-.lower__container ul:hover,
-.lower__container ul li:hover {
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.header__searchIcon:hover {
-    background-color: rgb(128, 212, 43);
-}
-
-.lower__headercontainer ul li:hover {
-    border: 1px solid rgb(233, 11, 11);
-
-
->>>>>>> 56dbabc0c2672523e0771b2c4b5ecc1b5084f774
 }
