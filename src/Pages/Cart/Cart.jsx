@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useContext } from "react";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
@@ -7,12 +6,6 @@ import { Link } from "react-router-dom";
 import modularcss from './cart.module.css'
 import LayOut from "../../Components/LayOut/LayOut";
 import { img } from "../../img/data";
-=======
-import React from 'react'
-import modularcss from './Cart.module.css'
-import LayOut from '../../Components/LayOut/LayOut'
-
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 
 function Cart() {
   const [{ basket, user }] = useContext(DataContext);
@@ -23,7 +16,6 @@ function Cart() {
 
   return (
     <LayOut>
-<<<<<<< HEAD
       <section className={modularcss.container}>
         <div className={modularcss.cart__container}>
           <h2>Hello {user ? user.email : "Guest"}</h2>
@@ -68,15 +60,6 @@ function Cart() {
       </section>
     </LayOut>
   );
-=======
-
-        <div>Cart</div>
-    </LayOut>
-     
-    
-
-  )
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 }
 
 export default Cart;

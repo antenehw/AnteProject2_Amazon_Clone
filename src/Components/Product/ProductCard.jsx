@@ -6,29 +6,16 @@ import modularcss from "./Product.module.css";
 import { Type } from "../../Utility/action.type";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 
-<<<<<<< HEAD
 function ProductCard({ product, flex, showCheckbox}) {
-=======
-
-function ProductCard({ product, flex }) {
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
   const { id, title, image, price, description, rating = { rate: 0, count: 0 } } = product;
   
   const [state, dispatch] = useContext(DataContext);
   console.log(state)
 
   const AddToBasket = () => {
-<<<<<<< HEAD
       dispatch({
       type: Type.ADD_TO_BASKET,
       item: { id, title, image, price, description, rating },
-=======
-    dispatch({
-      type: Type.ADD_TO_BASKET,
-      item: {
-        id, title, image, price, description, rating 
-      },
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
     });
   };
 
@@ -73,15 +60,9 @@ function ProductCard({ product, flex }) {
           <CurrencyFormat amount={price} />
         </div>
 
-<<<<<<< HEAD
       {/* Add to Cart */}
         <button className={modularcss.add_to_cart_btn} onClick={AddToBasket}>
           Add to Cart
-=======
-        {/* Add to Cart */}
-        <button className={modularcss.button} onClick={AddToBasket}>
-          Add to Basket
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
         </button>
         
         </div>

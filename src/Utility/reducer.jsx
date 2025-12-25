@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Type } from "./action.type";
-=======
-import {Type} from './action.type'
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
 
 export const initialState = {
   basket: [],
@@ -11,7 +7,6 @@ export const initialState = {
 
 export const reducer = (state, action) => {
   switch (action.type) {
-<<<<<<< HEAD
     case Type.ADD_TO_BASKET: {
       // Check if item already exists
       const existingItem = state.basket.find(
@@ -33,9 +28,6 @@ export const reducer = (state, action) => {
           : item
       );
 
-=======
-    case Type.ADD_TO_BASKET:
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
       return {
         ...state,
         basket: updatedBasket,

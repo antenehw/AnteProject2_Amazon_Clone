@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const Type = {
   ADD_TO_BASKET: "ADD_TO_BASKET",
   REMOVE_FROM_BASKET: "REMOVE_FROM_BASKET",
@@ -6,9 +5,3 @@ export const Type = {
   DECREASE_QTY: "DECREASE_QTY",
   TOGGLE_SELECT_OPTION: "TOGGLE_SELECT_OPTION",
 };
-=======
-export const Type ={
-
-    ADD_TO_BASKET:'ADD_TO_BASKET'
-}
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce

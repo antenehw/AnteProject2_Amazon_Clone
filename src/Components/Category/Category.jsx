@@ -13,10 +13,7 @@ function Category({ name: propName }) {
       <h2 className={modularcss.category_title}>{name}</h2>
 
       <section className={modularcss.category__container}>
-<<<<<<< HEAD
         
-=======
->>>>>>> d07e829201cb0461a986a2950a0ed3ac7384a5ce
         {CategoryInfos.map((data) => (
           <CategoryCard key={data.id} data={data} />
         ))}
